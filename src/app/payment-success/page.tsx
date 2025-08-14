@@ -11,7 +11,7 @@ export default function PaymentSuccessPage() {
       const email = session?.user?.email;
       if (!email) return;
 
-      const res = await fetch("http://18.143.206.136/flaskapp/payment-success", {
+      const res = await fetch("https://resumematcher.duckdns.org/flaskapp/payment-success", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

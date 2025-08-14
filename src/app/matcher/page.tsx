@@ -69,7 +69,7 @@ export default function Home() {
         reader.readAsText(file);
       });
 
-      const res = await fetch("http://18.143.206.136/flaskapp/score", {
+      const res = await fetch("https://resumematcher.duckdns.org/flaskapp/score", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

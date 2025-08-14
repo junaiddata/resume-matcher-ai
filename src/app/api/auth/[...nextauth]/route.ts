@@ -12,7 +12,7 @@ const handler = NextAuth({
       },
       async authorize(credentials) {
         try {
-          const res = await fetch("http://18.143.206.136/flaskapp/login", {
+          const res = await fetch("https://resumematcher.duckdns.org/flaskapp/login", {
             method: "POST",
             credentials: "include",
             headers: { "Content-Type": "application/json" },
@@ -48,7 +48,7 @@ const handler = NextAuth({
       // Handle Google sign-in
       if (account?.provider === "google" && user?.email) {
         try {
-          const res = await fetch("http://18.143.206.136/flaskapp/google-login", {
+          const res = await fetch("https://resumematcher.duckdns.org/flaskapp/google-login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: user.email, name: user.name }),

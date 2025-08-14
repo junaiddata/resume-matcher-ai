@@ -92,7 +92,7 @@ export default function PlansPage() {
 
     setLoading(true);
     try {
-      const res = await fetch("http://18.143.206.136/flaskapp/create-checkout-session", {
+      const res = await fetch("https://resumematcher.duckdns.org/flaskapp/create-checkout-session", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

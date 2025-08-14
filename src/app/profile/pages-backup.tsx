@@ -24,7 +24,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchProfile = async () => {
       if (!session?.user?.email) return;
-      const res = await fetch(`http://18.143.206.136/flaskapp/profile?email=${session.user.email}`);
+      const res = await fetch(`https://resumematcher.duckdns.org/flaskapp/profile?email=${session.user.email}`);
       const data = await res.json();
       setProfile(data);
     };

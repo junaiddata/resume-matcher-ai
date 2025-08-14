@@ -15,7 +15,7 @@ export default function VerifyEmailClient() {
       return;
     }
 
-    axios.post("http://18.143.206.136/flaskapp/verify-email", { token })
+    axios.post("https://resumematcher.duckdns.org/flaskapp/verify-email", { token })
       .then((res) => {
         setStatus(res.data.message);
       })
