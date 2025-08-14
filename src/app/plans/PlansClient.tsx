@@ -77,7 +77,7 @@ const plans = [
   },
 ];
 
-export default function PlansPage() {
+export default function PlansClient() {
   const searchParams = useSearchParams();
   const limitReached = searchParams.get("limit") === "true";
   const { data: session } = useSession();
